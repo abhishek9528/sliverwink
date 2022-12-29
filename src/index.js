@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
+const mongo = require("./DB/database")
 const PORT = process.env.PORT || 3889;
 app.set("view engine", "hbs");
 
