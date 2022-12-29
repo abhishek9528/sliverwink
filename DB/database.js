@@ -11,7 +11,7 @@ mongoose.connect("mongodb://localhost:27017", (err) => {
     }
 })
 
-let RagisterSchema = new mongoose.Schema({
+let StudentSchema = new mongoose.Schema({
     enrollment: {
         type: String,
         required:true,
@@ -45,7 +45,7 @@ let RagisterSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-    Sign_and: {
+    signature: {
         type: String,
         required:true
     },
@@ -61,7 +61,7 @@ let RagisterSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-    Board: {
+    board: {
         type: String,
         required:true
     },
@@ -73,7 +73,7 @@ let RagisterSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-    Id_nmuber: {
+    id_nmuber: {
         type: String,
         required:true
     },
@@ -81,19 +81,11 @@ let RagisterSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-    id_card: {
-        type: String,
-        required:true
-    },
-    Driving_lic: {
-        type: String,
-        required:true
-    },
     mobile_number: {
         type: String,
         required:true
     },
-    Email_id: {
+    email_id: {
         type: String,
         required:true
     },
@@ -104,9 +96,12 @@ let RagisterSchema = new mongoose.Schema({
     course_name: {
         type: String,
         required:true
-    }   
-
+    }, 
+    password: {
+        type: String,
+        required:true
+    }
 })
 
-let Register = new mongoose.model("Register",RagisterSchema,"Registration")
-module.exports = Register;
+let Student = new mongoose.model("Register",RagisterSchema,"Registration")
+module.exports = Student;
