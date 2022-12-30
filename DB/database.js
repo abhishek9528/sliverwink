@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 
 mongoose.set('strictQuery', false)
-mongoose.connect("mongodb://localhost:27017", (err) => {
+mongoose.connect("mongodb://localhost:27017/Silverwink", (err) => {
     if (err) {
         console.log(err)
     }
@@ -13,49 +13,66 @@ mongoose.connect("mongodb://localhost:27017", (err) => {
 
 let StudentSchema = new mongoose.Schema({
     enrollment: {
-        type: String,
+        type: Number,
         required:true,
-        unique:true
+        unique: true,
+        trim:true
     },
     photo: {
         type: String,
-        required:true
+        required:true,
+        trim:true
     },
     student_name: {
         type:String,
-        required:true
+        required: true,
+        uppercase: true,
+        trim:true
     },
     father_name: {
         type: String,
-        required:true
+        required: true,
+        uppercase: true,
+        trime:true
     },
     mother_name: {
         type: String,
-        required:true
+        required: true,
+        uppercase: true,
+        trim:true
     },
     date_of_birth: {
         type: String,
-        required:true
+        required: true,
+        trim:true
     },
     category: {
         type: String,
-        required:true
+        required: true,
+        trim: true,
+        uppercase:true
     },
     gender: {
         type: String,
-        required:true
+        required: true,
+        trim: true,
+        uppercase:true
     },
     signature: {
         type: String,
-        required:true
+        required: true,
+        trim:true
     },
     complete_address: {
         type: String,
-        required:true
+        required: true,
+        trime: true,
+        uppercase:true
     },
     qualification: {
         type: String,
-        required:true
+        required: true,
+        trim:true
     },
     exam_pass: {
         type: String,
@@ -63,43 +80,55 @@ let StudentSchema = new mongoose.Schema({
     },
     board: {
         type: String,
-        required:true
+        required: true,
+        trim: true,
+        uppercase:true
     },
     marks: {
-        type: String,
-        required:true
+        type: Number,
+        required: true,
+        trim:true
     },
     passing_year: {
-        type: String,
-        required:true
+        type: Number,
+        required: true,
+        trim:true
     },
     id_nmuber: {
-        type: String,
-        required:true
+        type: Number,
+        required: true,
+        trim:true
     },
     adhar_card: {
         type: String,
-        required:true
+        required: true,
+        trim: true
     },
     mobile_number: {
-        type: String,
-        required:true
+        type: Number,
+        required: true,
+        trim:true
     },
     email_id: {
         type: String,
-        required:true
+        required: true,
+        trim: true,
+        lowercase:true
     },
     total_fee: {
         type: String,
-        required:true
+        required: true,
+        trim:true
     },
     course_name: {
         type: String,
-        required:true
+        required: true,
+        trim:true
     }, 
     password: {
         type: String,
-        required:true
+        required: true,
+        
     }
 })
 
