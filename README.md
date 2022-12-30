@@ -1,8 +1,17 @@
 # sliverwink
 
-Yhan par personal kaam chal rha hai
-esa koi sochna bhi mat 
+yhan par work chal rha hai 
 
+Project Partners{
+    Aditya Dhiman
+    Akash Kumar 
+    Sahil Usmani
+    Abhishek
+    Tushar Chauhan
+    Mohd.Musheer
+    Udit Sharma (pandat)
+}
 
+All Rounder Developer:  "Shubham Choudhary"
 
 author "Aditya Dhiman"
