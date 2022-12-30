@@ -153,7 +153,7 @@ let CourseSchema = new mongoose.Schema({
         required:true
     },
     course_content: {
-        type: String,
+        type:String,
         required:true
     }
 })
