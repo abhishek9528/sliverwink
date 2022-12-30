@@ -3,7 +3,7 @@ const app = express();
 const hbs = require("hbs");
 const bcrypt =require('bcryptjs')
 const bodyparser = require('body-parser')
-const mongo = require("../DB/database.js")
+const mongo = require("../DB/database")
 const PORT = process.env.PORT || 3889;
 app.use(bodyparser.urlencoded({extended:true}))
 app.set("view engine", "hbs");

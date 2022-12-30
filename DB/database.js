@@ -126,6 +126,10 @@ let StudentSchema = new mongoose.Schema({
     }
 })
 
+// const Student = new mongoose.model("Register",StudentSchema,"Registration");
+
+// module.exports = Student;
+
 module.exports.Student = new mongoose.model("Register",StudentSchema, "Registration")
 
 
