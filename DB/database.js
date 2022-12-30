@@ -134,7 +134,6 @@ let StudentSchema = new mongoose.Schema({
 
 module.exports. Student = new mongoose.model("Register",StudentSchema, "Registration")
 
-
 let CourseSchema = new mongoose.Schema({
     course_name: {
         type: String,
@@ -155,7 +154,7 @@ let CourseSchema = new mongoose.Schema({
         required:true
     },
     course_content: {
-        type: String,
+        type:String,
         required:true
     }
 })
