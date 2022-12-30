@@ -132,8 +132,7 @@ let StudentSchema = new mongoose.Schema({
     }
 })
 
-let Student = new mongoose.model("Register", RagisterSchema, "Registration")
-module.exports = Student;
+module.exports. Student = new mongoose.model("Register",StudentSchema, "Registration")
 
 
 let CourseSchema = new mongoose.Schema({
@@ -160,3 +159,5 @@ let CourseSchema = new mongoose.Schema({
         required:true
     }
 })
+
+module.exports.Course = new mongoose.model("Course", CourseSchema, "Courses")
