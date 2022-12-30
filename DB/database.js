@@ -14,13 +14,11 @@ mongoose.connect("mongodb://localhost:27017/Silverwink", (err) => {
 let StudentSchema = new mongoose.Schema({
     enrollment: {
         type: Number,
-        required: true,
         unique: true,
         trim: true
     },
     photo: {
         type: String,
-        required: true,
         trim: true
     },
     student_name: {
@@ -60,7 +58,6 @@ let StudentSchema = new mongoose.Schema({
     },
     signature: {
         type: String,
-        required: true,
         trim: true
     },
     complete_address: {
@@ -76,7 +73,6 @@ let StudentSchema = new mongoose.Schema({
     },
     exam_pass: {
         type: String,
-        required: true
     },
     board: {
         type: String,
@@ -90,16 +86,16 @@ let StudentSchema = new mongoose.Schema({
         trim: true
     },
     passing_year: {
-        type: Number,
+        type: String,
         required: true,
         trim: true
     },
-    id_nmuber: {
-        type: Number,
+    id_number: {
+        type: String,
         required: true,
         trim: true
     },
-    adhar_card: {
+    id_type: {
         type: String,
         required: true,
         trim: true
@@ -117,12 +113,10 @@ let StudentSchema = new mongoose.Schema({
     },
     total_fee: {
         type: String,
-        required: true,
         trim: true
     },
     course_name: {
         type: String,
-        required: true,
         trim: true
     },
     password: {
@@ -132,7 +126,7 @@ let StudentSchema = new mongoose.Schema({
     }
 })
 
-module.exports. Student = new mongoose.model("Register",StudentSchema, "Registration")
+module.exports.Student = new mongoose.model("Register",StudentSchema, "Registration")
 
 
 let CourseSchema = new mongoose.Schema({

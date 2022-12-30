@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            background-image: url(https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?cs=srgb&dl=pexels-pixabay-373543.jpg&fm=jpg);
+           {{!-- background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9tLZOaaSWbt1wiBOG_ZEtLnb1aAnutX_yLg&usqp=CAU) --}}
+            background-size: cover;
+
+        }
+
+        .container {
+            width: 30%;
+            height: auto;
+            background-color: rgba(88, 21, 196, 0.801);
+            margin: 100px auto;
+            box-shadow: 0px 0px 5px rgba(255, 196, 0, 0.719);
+            border: 8px rgb(255, 0, 0);
+            padding: 25px;
+            border-radius: 6px;
+        }
+
+        .head {
+            width: 100%;
+            height: 40px;
+
+
+        }
+
+        .head h1 {
+            margin: 0;
+            font-weight: 100;
+            letter-spacing: 2px;
+            font-size: 2em;
+            color: white
+        }
+
+        .box {
+
+            width: 50%;
+            height: auto;
+            margin-bottom: 3px;
+            margin: 2px;
+        }
+
+        .box label {
+            display: block;
+            padding: 5px;
+            color: white;
+        }
+
+        .box input[type=text],
+        .box input[type=password],
+        .box input[type=email],
+        .box input[type=number] {
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+            border: none;
+            font-size: larger;
+            font-family: 'arial';
+            color: white;
+            border-bottom: 2px double red;
+            background: transparent;
+
+        }
+
+        .box input[type=submit],
+        .box input[type=reset] {
+            width: 70%;
+            height: 30px;
+            border: 1px solid rgb(23, 161, 241);
+            background-color: rgb(201, 28, 236);
+            color: white;
+            border-radius: 5px;
+            align-items: center;
+            margin-left: 80px;
+            margin-top: 15px;
+
+        }
+
+        .box input[type=submit]:hover,
+        .box input[type=reset]:hover {
+            box-shadow: 2px 2px 5px rgb(140, 50, 243);
+        }
+
+        .box input[type=submit]:active,
+        .box input[type=reset]:active {
+            box-shadow: inset 2px 2px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="container">
+            <form action="registration" method="post">
+                <div class="head">
+                    <h1>Silverwink Signup</h1>
+                </div>
+                <div class="box">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fname" name="fullname" placeholder="eg. First Last " required>
+                </div>
+                <div class="box">
+                    <label for="fname">Father's Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="eg. Father Full Name" required>
+                </div>
+                <div class="box">
+                    <label for="mname">Mother's Name</label>
+                    <input type="text" id="mname" name="mname" placeholder="eg. Mother Full Name" required>
+                </div>
+                <div class="box">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="box">
+                    <label for="gender" name="gender">Gender</label>
+                    <input type="radio" name="gen" id="male" value="male">
+                      <label for="male">MALE</label><br>
+                    <input type="radio" name="gen" id="female" value="female">
+                      <label for="female">FEMALE</label><br>
+
+                </div>
+                <div class="box">
+                    <label for="category">Choose Category</label>
+
+                    <select name="category" id="category">
+                        <option value="">Category</option>
+                        <option value="General">General</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="OBC">OBC</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <label for="address">Complete Address</label>
+                    <input type="textarea" name="address" required placeholder="eg House No. , Street , Locality, City , State , Pincode">
+                </div>
+
+                <div class="box">
+                    <label for="qualification">Qualification/Pursuing</label>
+                    <select name="qualification" id="qualification">
+                        <option value="">Choose</option>
+                        <option value="BA">BA</option>
+                        <option value="BCA">BCA</option>
+                        <option value="B.Com">B.Com</option>
+                        <option value="BSC">BSC</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="MCA">MCA</option>
+                        </select>
+                </div>
+
+                <div class="box">
+                    <label for="university">University</label>
+                    <select name="university" id="university">
+                        <option value="">Choose</option>
+                        <option value="CCS University">CCS University Meerut</option>
+                        <option value="AKTU">AKTU Lucknow</option>
+                        <option value="Subharti">Subharti</option>
+                        <option value="BIT">BIT</option>
+                        <option value="Delhi University">Delhi University</option>
+                        <option value="AMU">AMU</option>
+                        </select>
+                </div>
+                <div class="box">
+                    <label for="percentage">Percentage</label>
+                    <input type="text" name="percentage" placeholder="88" required>
+
+                </div>
+                <div class="box">
+                    <label for="year">Passing Year</label>
+                    <input type="month" name="year" id="year">
+                </div>
+
+                <div class="box">
+                    <label for="identity">ID Type</label>
+                    <select name="identity" id="identity">
+                        <option value="">Choose</option>
+                        <option value="Aadhaar Card">Aadhaar Card</option>
+                        <option value="Voter Card">Voter Card</option>
+                        <option value="Driving Licence">Driving Licence</option>
+                        <option value="PAN Card">PAN Card</option>
+                        </select>
+                </div>
+                <div class="box">
+                    <label for="idno">ID Number</label>
+                    <input type="text" name="idno" id="idno" required placeholder="XYZ12345">
+                </div>
+                <div class="box">
+                    <label for="Contact" maxlength="10">Contact Number</label>
+                    <input type="number" id="Contact" name="contact" placeholder="9876543210" required>
+                </div>
+                <div class="box">
+                    <label for="mail">Email</label>
+                    <input type="email" id="email" name="email" placeholder="eg. xyz@gmail.com" required>
+                </div>
+                <div class="box">
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password" name="pwd" required>
+                </div>
+                <div class="box">
+                    <label for="repassword">Confirm Password</label>
+                    <input type="password" id="repassword" name="pwd1" required>
+                </div>
+                <div class="box">
+                    <input type="submit" value="Signup">
+                    <input type="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
