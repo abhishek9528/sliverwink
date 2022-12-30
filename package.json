@@ -1,11 +1,11 @@
 {
   "name": "git",
   "version": "1.0.0",
-  "description": "",
+  "description": "yhan par work chal rha hai",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon src/index.js"
+    "start": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +17,15 @@
     "mongodb": "^4.13.0",
     "mongoose": "^6.8.2",
     "nodemon": "^2.0.20"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdityaDhiman1/dha.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/AdityaDhiman1/dha/issues"
+  },
+  "homepage": "https://github.com/AdityaDhiman1/dha#readme"
 }
