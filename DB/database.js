@@ -16,6 +16,11 @@ let institute_schema = mongoose.Schema({
         type: String,
         required:true,
     },
+    institute_address: {
+        type: String,
+        required: true,
+        trim:true
+    },
     institute_id: {
         type: String,
         unique: true,
