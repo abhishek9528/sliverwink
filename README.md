@@ -1,5 +1,13 @@
 # Silverwink E-Development Institute
 
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
 ### Work in progress...
 
 Project Partners
