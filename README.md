@@ -16,18 +16,3 @@ All Rounder Developer:  "Shubham Choudhary"
 
 author "Aditya Dhiman"
 
-
-├───DB
-│   └───database.js
-├───node_modules
-├───public
-│   └───img
-│       └───logo.png
-├───src
-│   └───index.js
-├───views
-│   ├───login.hbs
-│   └───signp.hbs
-├───package-lock.json
-├───package.json   
-└───README.md
