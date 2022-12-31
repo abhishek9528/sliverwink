@@ -12,11 +12,11 @@ To deploy this project run
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Example Color |  #F5F5F5 |
-| Example Color |  #303841 |
-| Example Color |  #D6E6F2 |
-| Example Color |  #F62A66 |
-| Example Color |  #FFD933 |
+| Background Color |  #F5F5F5 |
+| Text-color and Button Background Color |  #303841 |
+| Button Text Color |  #D6E6F2 |
+| Button Background and Link Color |  #F62A66 |
+| Also use this for link Color |  #FFD933 |
 
 
 
