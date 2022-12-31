@@ -8,15 +8,6 @@ const PORT = process.env.PORT || 3889;
 app.use(bodyparser.urlencoded({extended:true}))
 app.set("view engine", "hbs");
 app.get("/login", (req, res) => {
-  
-    mongo.Course.find({}, (err, data) => {
-        if (err) {
-            console.log(err)
-        }
-        else {
-            console.log(data)
-        }
-    })
     res.render("login");
 })
 app.get("/signup",(req,res)=>{
