@@ -19,6 +19,15 @@ To deploy this project run
 | Also use this for link Color |  #FFD933 |
 
 
+## 🚀 About Me
+We are a full stack developer...
+
+## Tech Stack
+
+**Client:** Handlebars(HBS), CSS
+
+**Server:** Node, Express, MongeDB
+
 
 
 ### Work in progress...
