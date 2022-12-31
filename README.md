@@ -3,9 +3,9 @@
 yhan par work chal rha hai 
 
 Project Partners
-- Adity Dhiman
-- Akas Kumar
-- Sahi Usmani
+- Aditya Dhiman
+- Akash Kumar
+- Sahil Usmani
 - Abhishek
 - Tushar Chauhan
 - Mohd.Musheer
