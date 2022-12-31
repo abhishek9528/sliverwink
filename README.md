@@ -1,6 +1,6 @@
 # Silverwink E-Development Institute
 
-yhan par work chal rha hai 
+### Work in progress...
 
 Project Partners
 - Aditya Dhiman
@@ -14,5 +14,5 @@ Project Partners
 
 All Rounder Developer:  "Shubham Choudhary"
 
-author "Aditya Dhiman"
+Author "Aditya Dhiman"
 
