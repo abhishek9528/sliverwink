@@ -22,7 +22,7 @@ To deploy this project run
 ## 🚀 About Me
 We are a full stack developer...
 
-### Tech Stack
+## Tech Stack
 
 **Client:** Handlebars(HBS), CSS
 
