@@ -19,7 +19,7 @@ To deploy this project run
 | Also use this for link Color |  #FFD933 |
 
 
-### 🚀 About Me
+## 🚀 About Me
 We are a full stack developer...
 
 ### Tech Stack
