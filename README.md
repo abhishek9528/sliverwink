@@ -3,12 +3,12 @@
 yhan par work chal rha hai 
 
 Project Partners{
-    Aditya Dhiman
-    Akash Kumar 
-    Sahil Usmani
-    Abhishek
-    Tushar Chauhan
-    Mohd.Musheer
+    Aditya Dhiman,
+    Akash Kumar,
+    Sahil Usmani,
+    Abhishek,
+    Tushar Chauhan,
+    Mohd.Musheer,
     Udit Sharma (pandat)
 }
 
