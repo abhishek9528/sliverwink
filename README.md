@@ -26,7 +26,8 @@ We are a full stack developer...
 
 **Client:** Handlebars(HBS), CSS
 
-**Server:** Node, Express, MongeDB
+**Server:** Node, Express
+**Database: **MongeDB
 
 ## 👨‍💻 Work in progress...
 
