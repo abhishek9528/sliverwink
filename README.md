@@ -5,7 +5,7 @@
 To deploy this project run
 
 ```bash
-  npm run deploy
+  npm run start
 ```
 
 ### Work in progress...
