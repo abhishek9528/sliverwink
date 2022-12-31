@@ -12,9 +12,24 @@ mongoose.connect("mongodb://localhost:27017/Silverwink")
 
 
 let institute_schema = mongoose.Schema({
-    institue_name: {
+    institute_name: {
         type: String,
         required:true,
+    },
+    institute_id: {
+        type: String,
+        unique: true,
+        require:true,
+    },
+    institute_email:{
+        type: String,
+        unique:true,
+        require:true,
+    },
+    institute_contact:{
+        type: Number,
+        unique: true,
+        require: true,
     },
     students: [
         {
@@ -37,7 +52,7 @@ let institute_schema = mongoose.Schema({
                 type: String,
                 required: true,
                 uppercase: true,
-                trime: true
+                trim: true
             },
             mother_name: {
                 type: String,
