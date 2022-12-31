@@ -17,6 +17,7 @@ To deploy this project run
 | Example Color | ![#D6E6F2](https://via.placeholder.com/10/D6E6F2?text=+) #D6E6F2 |
 | Example Color | ![#F62A66](https://via.placeholder.com/10/F62A66?text=+) #F62A66 |
 | Example Color | ![#FFD933](https://via.placeholder.com/10/FFD933?text=+) #FFD933 |
+| Example Color | ![#F62A66](https://via.placeholder.com/10/F62A66?text=+) #F62A66 |
 
 
 
