@@ -5,14 +5,39 @@ const bcrypt =require('bcryptjs')
 const bodyparser = require('body-parser')
 const mongo = require("../DB/database")
 const PORT = process.env.PORT || 3889;
-app.use(bodyparser.urlencoded({extended:true}))
+app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine", "hbs");
 app.get("/login", (req, res) => {
     res.render("login");
+});
+app.post("/login", (req, res) => {
+    let {email, password} = req.body;
+    mongo.Student.find({email_id: email}, (err, data) => {
+        if(err){
+            console.log(err);
+        }else{
+            try{
+                if(data.length > 0){
+                    if(bcrypt.compareSync(password, data[0].password)){
+                        console.log("Compared");
+                        res.redirect("/?msg=Login Successful")
+
+                    }else{
+                        res.redirect("/?msg=Invalid Credentials");
+                    }
+                }else{
+                    console.log("Data is not found");
+                }
+            }catch(err){
+                console.log(err);
+            }
+        }
+    })
 })
 app.get("/signup",(req,res)=>{
     res.render("signup");
-})
+});
+
 app.post("/registration",async(req,res)=>
 {
     const{fullname,fname,mname,dob,gen,category,address,qualification,university,percentage,year,identity,
@@ -30,6 +55,7 @@ email_id:email,password:epass}
         console.log(resp)
     }
 });
+
 console.log(dbdata);
 res.redirect("/login");
    
