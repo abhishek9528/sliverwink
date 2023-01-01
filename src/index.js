@@ -4,6 +4,8 @@ const hbs = require("hbs");
 const bcrypt =require('bcryptjs')
 const bodyparser = require('body-parser')
 const mongo = require("../DB/database")
+const session = require("express-session");
+const mongosession = require("connect-mongodb-session")(session);
 let path=require("path");
 const PORT = process.env.PORT || 3889;
 app.use(bodyparser.urlencoded({extended:true}));
@@ -11,35 +13,68 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname,"../public")));
 hbs.registerPartials(path.join(__dirname,"../partials/"));
 
+
+const store = new mongosession({
+    uri: mongo.url,
+    collection: 'mysession',
+});
+app.use(session({
+    secret: 'AATAMSU',
+    resave: false,
+    saveUninitialized: false,
+    store: store
+}));
+
+const isStudent = (req,res, next) => {
+    if(req.session.isStudent){
+        next()
+    } else {
+        res.redirect('/login');
+    }
+}
+
+
 app.get("/login", (req, res) => {
-    res.render("login");
+    if(req.session.isStudent){
+        res.redirect("/")
+    }else{
+        res.render("login");
+    }
 });
 app.post("/login", (req, res) => {
     let {email, password} = req.body;
     mongo.Student.find({email_id: email}, (err, data) => {
         if(err){
             console.log(err);
+            res.redirect("/?msg=Some Error Orrcured")
         }else{
             try{
                 if(data.length > 0){
                     if(bcrypt.compareSync(password, data[0].password)){
                         console.log("Compared");
-                        res.redirect("/?msg=Login Successful")
+                        req.session.isStudent = true;
+                        req.session.StudentName = data[0].student_name;
+                        res.redirect("/")
 
                     }else{
-                        res.redirect("/?msg=Invalid Credentials");
+                        res.redirect("/login?msg=Invalid Credentials");
                     }
                 }else{
-                    console.log("Data is not found");
+                    res.redirect("/signup?msg=Data is not found");
                 }
             }catch(err){
                 console.log(err);
+                res.redirect("/signup?msg=Data is not found");
             }
         }
     })
 })
 app.get("/signup",(req,res)=>{
-    res.render("signup");
+    if(req.session.isStudent){
+        res.redirect("/");
+    }else{
+        res.render("signup");
+    }
 });
 
 app.post("/registration",async(req,res)=>
@@ -63,6 +98,19 @@ console.log(dbdata);
 res.redirect("/login");
    
 });
+app.get("/",isStudent ,(req,res)=>{
+    res.render("Dashboard", {isStudentName: req.session.StudentName});
+})
+app.get("/student",(req,res)=>{
+    res.render("student", {isStudentName: req.session.StudentName});
+});
+
+app.get("/logout", (req, res) => {
+    req.session.destroy((err) => {
+        if(err) throw err;
+        return res.redirect("/login");
+    })
+})
 app.listen(PORT, () => {
     console.log("Server is started at port " + PORT);
 })
