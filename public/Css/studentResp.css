@@ -1,0 +1,113 @@
+@media (min-width:280px) and (max-width:767px){
+    body{
+        width:100%;
+        height:100vh;
+        margin:0;
+        display:flex;   
+    }
+    .main-div{
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+    }
+    .main-div .nav-div{
+        width:100%;
+        height:80px;
+        background-color:#F5F5F5;
+        display:flex;
+        box-shadow: 4px 4px 4px;
+    }
+    .main-div .nav-div .icon-div{
+        width:15%;
+        height:inherit;
+        display:block;
+        text-align:center;
+        line-height:80px;
+    }
+    .main-div .nav-div .icon-div span i,
+    .main-div .nav-div .sign-div .info-div .icon i{
+        font-size:18px;
+    }
+    .main-div .nav-div .img-div{
+        width:30%;
+        height:inherit;
+    }
+    .main-div .nav-div .img-div img{
+        width:80%;
+        height:60px;
+        border-radius:10px;
+    }
+    .main-div .nav-div .sign-div{
+        width:55%;
+        height:inherit;
+    }
+    .main-div .nav-div .sign-div .heading-div{
+        display:none;
+    }
+    .main-div .nav-div .sign-div .info-div{
+        width:100%;
+        height:inherit;
+    }
+    .main-div .nav-div .sign-div .info-div .profile-div{
+        width:100%;
+        height:inherit;
+    }
+    .main-div .nav-div .sign-div .info-div .profile-div img{
+        width:20%;
+        height:30px;
+        border-radius:10px;
+    }
+    .main-div .nav-div .sign-div .info-div .profile-div .para-div{
+        width:60%;
+        height:inherit;
+    }
+    .main-div .nav-div .sign-div .info-div .profile-div .para-div p{
+        font-size:10px;
+        margin:0;
+        line-height:80px;
+    }
+    .main-div .nav-div .sign-div .info-div .icon{
+         display:none;
+    }
+    a{
+        font-size:10px;
+    }
+    .main-div .log-div{
+        width:100%;
+        height:auto;
+        position:realtive;
+        display:flex;
+        flex-direction:column;     
+    }
+    .main-div .log-div .option-div{
+        display:none;
+        width:40%;
+        height:250px;
+        background-color:#F5F5F5; 
+        position:absolute;
+        box-shadow:2px 2px 10px;
+        z-index:999;
+    }
+    .main-div .log-div .option-div a{
+        font-size:11px;
+    }
+    .main-div .log-div .data-div{
+        width:100%;
+        height:1850px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        background-color:#F5F5F5;
+    }
+    .main-div .log-div .data-div .card-div{
+        width:90%;
+        height:900px;
+        display:flex;
+        flex-direction:column;
+    }   
+    .main-div .log-div .data-div .card-div .card{
+        width:100%;
+        height:260px;
+    }
+}

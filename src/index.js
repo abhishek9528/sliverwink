@@ -4,9 +4,13 @@ const hbs = require("hbs");
 const bcrypt =require('bcryptjs')
 const bodyparser = require('body-parser')
 const mongo = require("../DB/database")
+let path=require("path");
 const PORT = process.env.PORT || 3889;
 app.use(bodyparser.urlencoded({extended:true}))
 app.set("view engine", "hbs");
+app.use(express.static(path.join(__dirname,"../public")));
+hbs.registerPartials(path.join(__dirname,"../partials/"));
+
 app.get("/login", (req, res) => {
     res.render("login");
 })
@@ -30,6 +34,12 @@ email_id:email,password:epass}
         console.log(resp)
     }
 });
+app.get("/",(req,res)=>{
+    res.render("Dashboard");
+})
+app.get("/student",(req,res)=>{
+    res.render("student");
+})
 console.log(dbdata);
 res.redirect("/login");
    
