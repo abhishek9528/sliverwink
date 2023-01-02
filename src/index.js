@@ -95,6 +95,34 @@ app.post("/registration", async (req, res) => {
     console.log(dbdata);
     res.redirect("/login");
 });
+
+app.get("/sign",(req,res)=>{
+    res.render("sign");
+})
+app.post("/register",async(req,res)=>
+{
+    const{firstname,lastname,fname,mname,dob,gender,category,address,city,state,zip,qualification,university,percentage,year,identity,
+        idno,contact,email,pwd,pwd1}=req.body;
+        const fullname= firstname+" "+lastname;
+        const complete_address= address +","+city+","+state+","+zip;
+  const epass=await bcrypt.hash(pwd1,12)
+  const dbdata={student_name:fullname,father_name:fname,mother_name:mname,date_of_birth:dob,
+category:category,gender:gender,complete_address:complete_address,qualification:qualification,board:university,
+marks:percentage,passing_year:year,id_type:identity,id_number:idno,mobile_number:contact,
+email_id:email,password:epass}
+  await mongo.Student.insertMany([dbdata],(err,resp)=>
+{
+    if(err){
+        console.log(err);
+    }else{
+        console.log(resp)
+    }
+});
+// console.log(dbdata);
+res.redirect("/login");
+   
+});
+
 app.get("/", (req, res) => {
     res.render("Dashboard");
 })
@@ -110,27 +138,6 @@ app.get("/signup",(req,res)=>{
     }
 });
 
-app.post("/registration",async(req,res)=>
-{
-    const{fullname,fname,mname,dob,gen,category,address,qualification,university,percentage,year,identity,
-        idno,contact,email,pwd,pwd1}=req.body;
-  const epass=await bcrypt.hash(pwd,12)
-  const dbdata={student_name:fullname,father_name:fname,mother_name:mname,date_of_birth:dob,
-category:category,gender:gen,complete_address:address,qualification:qualification,board:university,
-marks:percentage,passing_year:year,id_type:identity,id_number:idno,mobile_number:contact,
-email_id:email,password:epass}
-  await mongo.Student.insertMany([dbdata],(err,resp)=>
-{
-    if(err){
-        console.log(err);
-    }else{
-        console.log(resp)
-    }
-});
-console.log(dbdata);
-res.redirect("/login");
-   
-});
 app.get("/",isStudent ,(req,res)=>{
     res.render("Dashboard", {isStudentName: req.session.StudentName});
 })
