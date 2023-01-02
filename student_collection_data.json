@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "63b183690147904c814e0eda"
+  },
+  "student_name": "STUDENT NAME",
+  "father_name": "STUDENT FATHER NAME",
+  "mother_name": "STUDENT MOTHET NAME",
+  "date_of_birth": "2004-06-20",
+  "category": "OBC",
+  "gender": "MALE",
+  "complete_address": "STUDENT ADDRESS",
+  "qualification": "B.Tech",
+  "board": "AKTU",
+  "marks": 78,
+  "passing_year": "2024-05",
+  "id_number": "98987623469",
+  "id_type": "Aadhaar Card",
+  "mobile_number": 9867887,
+  "email_id": "ak@gmail.com",
+  "password": "$2a$12$DWz77pLaV9VN6tc6i9RgZuGUcxSCq2xTzzQXV8OlT33VHerrOWw7a",
+  "__v": 0
+}]
