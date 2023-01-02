@@ -7,7 +7,6 @@ const mongo = require("../DB/database")
 let path = require("path");
 const session = require("express-session");
 const mongosession = require("connect-mongodb-session")(session);
-let path=require("path");
 const PORT = process.env.PORT || 3889;
 app.use(bodyparser.urlencoded({ extended: true }))
 app.use(bodyparser.urlencoded({extended:true}));
