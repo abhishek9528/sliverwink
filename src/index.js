@@ -8,8 +8,9 @@ let path=require("path");
 const PORT = process.env.PORT || 3889;
 app.use(bodyparser.urlencoded({extended:true}))
 app.set("view engine", "hbs");
+app.set("views",path.join(__dirname,"../templates/views"));
 app.use(express.static(path.join(__dirname,"../public")));
-hbs.registerPartials(path.join(__dirname,"../partials/"));
+hbs.registerPartials(path.join(__dirname,"../templates/partials/"));
 
 app.get("/login", (req, res) => {
     res.render("login");
@@ -34,16 +35,21 @@ email_id:email,password:epass}
         console.log(resp)
     }
 });
+console.log(dbdata);
+res.redirect("/login");  
+});
+// Dashboard page
 app.get("/",(req,res)=>{
     res.render("Dashboard");
 })
+// student page
 app.get("/student",(req,res)=>{
     res.render("student");
 })
-console.log(dbdata);
-res.redirect("/login");
-   
-});
+// after search on the student page the details show of the student
+app.get("/info",(req,res)=>{
+    res.render("studentinfo");
+})
 app.listen(PORT, () => {
     console.log("Server is started at port " + PORT);
 })

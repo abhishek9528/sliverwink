@@ -78,7 +78,7 @@
         height:auto;
         position:realtive;
         display:flex;
-        flex-direction:column;     
+        flex-direction:column; 
     }
     .main-div .log-div .option-div{
         display:none;
@@ -91,30 +91,64 @@
     }
     .main-div .log-div .option-div a{
         font-size:11px;
-    }
+    }  
     .main-div .log-div .data-div{
         width:100%;
         height:auto;
-        background-color:#F5F5F5;
-    }
+        border-radius:0px;
+    } 
     .main-div .log-div .data-div .scroll-div{
-        width:100%;
+        width:99%;
         height:auto;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
     }
-    .main-div .log-div .data-div .card-div{
-        width:90%;
-        /* height:900px; */
+    .main-div .log-div .data-div .scroll-div .top-info{
+        width:100%;
         height:auto;
         display:flex;
-        flex-direction:column;
-        margin:10px 0px 10px 0px
-    }   
-    .main-div .log-div .data-div .card-div .card{
+    }
+    .main-div .log-div .data-div .scroll-div .top-info .img-div{
+        width:40%;
+        height:120px;
+        margin:5px 5px 10px 5px;
+    }
+    .main-div .log-div .data-div .scroll-div .top-info .img-div img{
         width:100%;
-        height:260px;
-        margin:10px 0px 10px 0px;
+        height:inherit;
+        border-radius:10px;
+    }
+    .main-div .log-div .data-div .scroll-div .top-info .information-div{
+        width:60%;
+        height:120px;
+        margin:5px 5px 5px 5px;
+    }
+    .main-div .log-div .data-div .scroll-div .top-info .information-div .name-div,
+    .main-div .log-div .data-div .scroll-div .top-info .information-div .roll-div,
+    .main-div .log-div .data-div .scroll-div .top-info .information-div .phone-div{
+        width:100%;
+        height:30px;
+        margin:5px 5px 5px 5px;
+        padding-left:5px;
+        line-height:30px;
+    } 
+    .information-div p{
+        font-size:12px;
+    }
+    .data-div .scroll-div .info-div{
+        width:100%;
+        height:auto;
+    }
+    .data-div .scroll-div .info-div .div{
+        width:95%;
+        height:auto;
+    }
+    .data-div .scroll-div .info-div .div .info{
+        width:98.5%;
+        height:30px;
+        line-height:30px;
+        margin:5px 5px 5px 5px;
+        padding-left:5px;
+    }
+    .info p{
+        font-size:12px;
     }
 }

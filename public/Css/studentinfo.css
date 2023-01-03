@@ -137,91 +137,89 @@ p{
 .main-div .log-div .data-div{
     width:84%;
     height:580px;
-    background-color:rgba(207, 207, 207, 0.167);
+    background-color:#F5F5F5;
     margin-top:20px;
-    border-radius:30px;
     overflow:scroll;
+    margin:auto;
 }
 .main-div .log-div .data-div .scroll-div{
+    width:95%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    border:1px solid rgba(0, 0, 0, 0.225);  
+    border-radius:15px;
+}
+.main-div .log-div .data-div .scroll-div .top-info{
+    width:100%;
+    height:inherit;
+    display:flex;
+}
+.main-div .log-div .data-div .scroll-div .top-info .img-div{
+    width:15%;
+    height:200px;
+    margin:25px 0px 10px 25px;
+}
+.main-div .log-div .data-div .scroll-div .top-info .img-div img{
+    width:100%;
+    height:inherit;
+    border-radius:10px;
+}
+.data-div .scroll-div .top-info .information-div{
+    width:85%;
+    height:200px;
+    background-color:#F5F5F5;
+    margin:25px 25px 10px 25px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.data-div .scroll-div  .top-info .information-div .name-div,
+.data-div .scroll-div  .top-info .information-div .roll-div,
+.data-div .scroll-div  .top-info .information-div .phone-div{
+    width:95%;
+    height:40px;
+    margin:12px 10px 12px 10px;
+    box-sizing:border-box;
+    line-height:40px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.225);
+    padding-left:25px;
+}
+.information-div p{
+    font-size:17px;
+    color:#303841;
+    margin:0px;
+    font-weight:500;
+}
+.data-div .scroll-div .info-div{
     width:100%;
     height:auto;
     display:flex;
-    flex-direction:column;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 }
-.main-div .log-div .data-div .card-div{
+.data-div .scroll-div .info-div .div{
     width:95%;
-    height:260px;
-    display:flex;
-    justify-content:space-evenly;
-    margin:20px 0px 0px 0px;
-}
-.main-div .log-div .data-div .card-div .card{
-    width:30%;
-    height:inherit;
     background-color:#F5F5F5;
-    border-radius:10px;
+    height:auto;
     display:flex;
-    flex-direction:column;
-    position:relative;
-    overflow:hidden;
-    /* margin:0px 10px 0px 10px; */
-}
-.main-div .log-div .data-div .card-div .card img{
-    width:100%;
-    height:inherit;
+    flex-direction: column;
     border-radius:10px;
 }
-.main-div .log-div .data-div .card-div .card .info-div{
-    width:100%;
-    height:160px;
-    position:absolute;
-    bottom:-60px;
-    display:flex;
-    flex-direction:column;
-    /* background-color:#f5f5f57b;  */
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: ease-in-out 0.5s;
+.data-div .scroll-div .info-div .info{
+    width:98.5%;
+    height:40px;
+    box-sizing:border-box;
+    border-bottom:1px solid rgba(0, 0, 0, 0.225);
+    margin:12px 10px 12px 0px;
+    line-height:40px;
+    padding-left:25px;
 }
-.main-div .log-div .data-div .card-div .info-div:hover{
-    bottom:0px;
-}
-.main-div .log-div .data-div .card-div .card .info-div .info{
-    width:100%;
-    height:100px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-evenly;
-}
-.info-div .info p{
-    margin:0;
-    font-size:15px;
+.info p{
+    font-size:17px;
     color:#303841;
+    font-weight:500;
 }
-.main-div .log-div .data-div .card-div .info-div .button-div{
-    width:100%;
-    height:60px;
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
-}
-.main-div .log-div .data-div .card-div .info-div .button-div .edit-div,
-.main-div .log-div .data-div .card-div .info-div .button-div .delete-div,
-.main-div .log-div .data-div .card-div .info-div .button-div .activate-div{
-    width:28%;
-    height:35px;
-    background-color:#F62A66;
-    text-align:center;
-    line-height:35px;
-    border-radius:8px;
-}
-.edit-div a,
-.activate-div a,
-.delete-div a{
-    font-size:15px;
-    color:#D6E6F2 ;
-}
-
