@@ -20,13 +20,14 @@
 
             <h3 class="mb-5">Sign in</h3>
 
-            <div class="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+            <form action="/login" method="post">
+              <div class="form-outline mb-4">
+              <input type="email" id="typeEmailX-2" name="email" class="form-control form-control-lg" />
               <label class="form-label" for="typeEmailX-2">Email</label>
             </div>
 
             <div class="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+              <input type="password" id="typePasswordX-2" name="password" class="form-control form-control-lg" />
               <label class="form-label" for="typePasswordX-2">Password</label>
             </div>
 
@@ -38,6 +39,7 @@
 
             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
 
+            </form>
             <hr class="my-4">
 
             <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"

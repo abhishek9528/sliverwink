@@ -1,8 +1,11 @@
 const mongoose = require("mongoose")
-
-
+let url = "mongodb://localhost:27017/Silverwink";
 mongoose.set('strictQuery', true)
+<<<<<<< HEAD
 mongoose.connect("mongodb://127.0.0.1:27017/Silverwink")
+=======
+mongoose.connect(url)
+>>>>>>> 0dadcc9bff4350c5e4fb3d7086dab8d060ab1ac1
     .then(() => {
         console.log("Connected To Database")
     })
@@ -175,7 +178,10 @@ let course_schema = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+});
+
+
 module.exports.Courses = new mongoose.model("Courses",course_schema,"Courses")
 module.exports.Student = new mongoose.model("Student", student_schema, "Students")
 module.exports.Institute = new mongoose.model("Institute", institute_schema, "Institutes")
+module.exports.url = url;

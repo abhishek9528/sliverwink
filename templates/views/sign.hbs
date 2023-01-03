@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Silverwink Registration Form</title>
+  <style>
+    #formbody {
+      background-image: url(https://www.zdnet.com/a/img/resize/0a6b0be2f543ddbf313fc83a706b807b77c3c202/2021/07/19/8a337c80-5ed6-43a1-98fb-b981d420890f/programming-languages-shutterstock-1680857539.jpg?auto=webp&fit=crop&height=900&width=1200);
+      /* background-repeat: no-repeat; */
+      background-size: 100%;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid" id="formbody">
+    <div class="row justify-content-center" id="formData">
+      <div class="col-lg-4">
+        <div class="card bg-primary text-light">
+          <h2 class="card-title text-light mt-3" align="center">Silverwink Registration</h2>
+          <p class="card-text" align="center"></p>
+          <hr class=" border position-relative " style="width: 70%; align-self: center; margin: 0px;">
+          <div class="card-body">
+            <form class="row g-3 mt-3 needs-validation" onsubmit="return validation()" name="signupform" action="/registration" id="form" method="post" >
+              <div class="col-md-6">
+                <label for="firstname" class="form-label">First name</label>
+                <input type="text" class="form-control rounded-pill"  placeholder="Ravi.."  name="firstname" id="firstname" value=""
+                   >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+              <div class="col-md-6">
+                <label for="lastname" class="form-label">Last name</label>
+                <input type="text" class="form-control rounded-pill" placeholder="Kumar.." name="lastname" id="lastname" value=""
+                   >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+              <label for="fname" class="form-label">Father Name</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control rounded-pill"placeholder="Rakesh Kumar" name="fname" id="fname"
+                  aria-describedby="inputGroupPrepend"  >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+              <label for="mname" class="form-label">Mother Name</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control rounded-pill" placeholder="Lata Devi" name="mname" id="mname"
+                  aria-describedby="inputGroupPrepend"  >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+              <label for="dob" class="form-label">Date of Birth</label>
+              <div class="input-group has-validation">
+                <input type="date" class="form-control rounded-pill" placeholder="dd-mm-yyyy" name="dob" id="dob"
+                  aria-describedby="inputGroupPrepend"  >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+
+              <div class="col-md-6">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select rounded-pill" name="category" id="category"  >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="General">General</option>
+                  <option value="SC">SC</option>
+                  <option value="ST">ST</option>
+                  <option value="OBC">OBC</option>
+                </select>
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <div class="col-md-6">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select rounded-pill" name="gender" id="gender"  >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+
+                </select>
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <label for="address" class="form-label">Address</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control rounded-pill" placeholder="House No. ,Street , Locality Village" name="address" id="address"
+                  aria-describedby="inputGroupPrepend"  >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+
+
+
+              <div class="col-md-3">
+                <label for="selectcity" class="form-label">City</label>
+                <input type="text" class="form-control rounded-pill" placeholder="City Name" name="city" id="city"  >
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom04" class="form-label">State</label>
+                <select class="form-select rounded-pill" name="state" id="state"  >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                  <option value="Daman and Diu">Daman and Diu</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Puducherry">Puducherry</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+              <div class="col-md-3">
+                <label for="zip1" class="form-label">Zip</label>
+                <input type="text" class="form-control rounded-pill" placeholder="251002" name="zip" id="zip"  >
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <div class="col-md-6">
+                <label for="qualification" class="form-label">Qualfication</label>
+                <select class="form-select rounded-pill" name="qualification" id="qualification"  >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="BA">BA</option>
+                  <option value="BCA">BCA</option>
+                  <option value="B.Com">B.Com</option>
+                  <option value="BSC">BSC</option>
+                  <option value="B.Tech">B.Tech</option>
+                  <option value="MCA">MCA</option>
+                  <option value="other">Others</option>
+                </select>
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <div class="col-md-6">
+                <label for="qualification" class="form-label">University</label>
+                <select class="form-select rounded-pill" name="university" id="university"  >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="CCS University">CCS University Meerut</option>
+                  <option value="AKTU">AKTU Lucknow</option>
+                  <option value="Subharti">Subharti</option>
+                  <option value="BIT">BIT</option>
+                  <option value="Delhi University">Delhi University</option>
+                  <option value="AMU">AMU</option>
+                  <option value="other">Others</option>
+                </select>
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <div class="col-md-6">
+                <label for="percentage" class="form-label">Percentage</label>
+                <input type="text" class="form-control rounded-pill" placeholder="eg 33 or 75" name="percentage" id="percentage" value=""
+                   >
+               <small><div class="error-message">
+                </div> </small> 
+              </div>
+              <div class="col-md-6">
+                <label for="year" class="form-label">Passing Year</label>
+                <input type="text" class="form-control rounded-pill" placeholder="2014 or 2020 or any" name="year" id="year" value=""  >
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <div class="col-md-6">
+                <label for="identity" class="form-label">ID Type</label>
+                <select class="form-select rounded-pill" name="identity" id="identity"  >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Aadhaar Card">Aadhaar Card</option>
+                  <option value="Voter Card">Voter Card</option>
+                  <option value="Driving Licence">Driving Licence</option>
+                  <option value="PAN Card">PAN Card</option>
+                </select>
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <div class="col-md-6">
+                <label for="idno" class="form-label">ID Number</label>
+                <input type="text" class="form-control rounded-pill" placeholder="4522ADV7" name="idno" id="idno" value=""  >
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+              <div class="col-md-6">
+                <label for="image" class="form-label">Select Your Image</label>
+                <input type="file" class="form-control rounded-pill" name="image" id="image" value="">
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+              <div class="col-md-6">
+                <label for="sign" class="form-label">Upload Signature</label>
+                <input type="file" class="form-control rounded-pill" name="sign" id="sign" value="">
+                <small><div class="error-message">
+                </div> </small> 
+              </div>
+
+              <label for="phone" class="form-label">Mobile Number</label>
+              <div class="input-group has-validation">
+                <input type="number" class="form-control rounded-pill" placeholder="9876543210" name="contact" id="phone"
+                  placeholder="Enter 10 digit" aria-describedby="inputGroupPrepend"  >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+
+              <label for="email" class="form-label">Email</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control rounded-pill" placeholder="xyz@ymail.com" name="email" id="email"
+                  aria-describedby="inputGroupPrepend"  >
+                  <small><div class="error-message">
+                  </div> </small> 
+              </div>
+
+              <label for="password">Password</label>
+              <input type="password" class="form-control rounded-pill" placeholder="atleast 1 digit Upper Char Special Symbol minimum 8 length" id="password"  name="pwd"
+                placeholder="Enter Password" value=""  ><small><div class="error-message">
+                </div> </small> 
+              <label for="cpass">Confirm-Password</label>
+              <input type="password" class="form-control rounded-pill" id="cpass"  name="pwd1"
+                placeholder="Confirm Password" value=""  ><small><div class="error-message">
+                </div> </small> 
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input rounded-pill" type="checkbox" value="" id="termagree"  >
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <small><div class="error-message">
+                  </div> </small> 
+                </div>
+              </div>
+              <div class="col-md-12 text-center ">
+                <button class="btn btn-danger" title="Submit Your Form" aria-label="Left Align" name="reg_user"
+                  type="submit"> <span class="fa fa-user-plus" aria-hidden="true"></span> Register Now</button>
+              </div>
+              <div class="col-md-12 text-center ">
+                <button class="btn btn-info" title="Submit Your Form" aria-label="Left Align" name="reset" type="reset">
+                  Reset</button>
+              </div>
+              <span class="extra-line text-center">
+                <span>Already have an account?</span>
+                <a href="#">Login</a>
+
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script> 
+
+let firstname = document.getElementById("firstname");
+let lastname = document.getElementById("lastname");
+let fname = document.getElementById("fname");
+let mname = document.getElementById("mname");
+let dob = document.getElementById("dob");
+let category = document.getElementById("category");
+let gender = document.getElementById("gender");
+let address = document.getElementById("address");
+let city = document.getElementById("city");
+let state = document.getElementById("state");
+let zip = document.getElementById("zip");
+let qu = document.getElementById("qualification");
+let uni = document.getElementById("university");
+let per = document.getElementById("percentage");
+let year = document.getElementById("year");
+let identity = document.getElementById("identity");
+let idno = document.getElementById("idno");
+let phone = document.getElementById("phone");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+let cpass = document.getElementById("cpass");
+let termagree = document.getElementById("termagree");
+let error = document.getElementsByClassName('error-message');
+const form = document.getElementById("form")
+
+var regname = /^[A-Za-z ]{3,20}$/;
+var idverify = /^[A-Z0-9]{8,15}$/;
+var addressverify =  /^[A-Za-z0-9 /,.]{10,60}$/;
+var cityverify = /^[A-Za-z]{3,30}$/;
+var zipverify = /^[1-9][0-9]{5}$/;
+var phoneverify =/^[6789][0-9]{9}$/;
+var emailverify= /^[a-z.0-9]{3,}@[a-z]{3,}[.]{1}[a-z.]{2,6}$/;
+var yearverify =/^[2][0][012][0-9]$/;
+var perverify= /^[3-9][0-9]$/;
+var passwordverify =/^(?=.*\d)(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*[-\#\$\.\%\&\*\@])(?=.*[a-zA-Z]).{8,16}$/;
+
+
+let dt = new Date();
+let d = dt.getDate();
+let m = dt.getMonth() + 1;
+let y = dt.getFullYear() - 13;
+let cy = dt.getFullYear();
+if (d < 10) {
+    d = "0" + d.toString();
+}
+if (m < 10) {
+    m = "0" + m.toString();
+}
+
+var ctyear = y + "-" + m + "-" + d;
+dob.setAttribute("max", ctyear);
+
+var DOB = new Date(dob);
+let byear = DOB.getFullYear();
+if (byear > cy)
+
+    form.addEventListener('submit', (e) => {
+        if (firstname == "" || lastname == "" || fname == "" || mname == "" || dob == "" || category == "" || gender == "" || address == "" || city == "" || state == "" || zip == "" || qu == ""
+            || uni == "" || per == "" || year == "" || identity == "" || idno == "" || phone == "" || email == "" || password == "" || cpass == "")
+            alert("Please fill all the fields")
+        e.preventDefault()
+    })
+
+
+
+
+function setError(i, msg) {
+    error[i].innerHTML = msg;
+    error[i].style.color = "red";
+
+}
+function solveError(i, msg) {
+    error[i].innerHTML = msg;
+    error[i].style.color = "white";
+}
+
+function validation() {
+    var st = true;
+    var ok
+
+    if (firstname.value.length < 3 || firstname.value == "") {
+        setError(0, "Name is too Short")
+        st = false;
+    }
+
+    else if (firstname.value.length > 15) {
+        setError(0, "Name is too Long")
+        st = false;
+    }
+    else if
+        (!regname.test(firstname.value)) {
+        setError(0, "This is not a Valid Name")
+        st = false;
+    }
+
+    if
+        (regname.test(firstname.value)) {
+        solveError(0, "This is a Valid Name")
+
+    }
+
+
+    if (lastname.value.length < 3 || lastname.value == "") {
+        setError(1, "Name is too Short")
+        st = false;
+    }
+
+    else if (lastname.value.length > 15) {
+        setError(1, "Name is too Long")
+        st = false;
+    }
+    else if
+        (!regname.test(lastname.value)) {
+        setError(1, "This is not a Valid Name")
+        st = false;
+    }
+
+    if
+        (regname.test(lastname.value)) {
+        solveError(1, "This is a Valid Name")
+    }
+
+
+    if (fname.value.length < 3 || fname.value == "") {
+        setError(2, "Name is too Short")
+        st = false;
+    }
+
+    else if (fname.value.length > 20) {
+        setError(2, "Name is too Long")
+        st = false;
+    }
+    else if
+        (!regname.test(fname.value)) {
+        setError(2, "This is not a Valid Name")
+        st = false;
+    }
+
+    if
+        (regname.test(fname.value)) {
+        solveError(2, "This is a Valid Name")
+    }
+
+
+    if (mname.value.length < 3 || mname.value == "") {
+        setError(3, "Name is too Short")
+        st = false;
+    }
+
+    else if (mname.value.length > 20) {
+        setError(3, "Name is too Long")
+        st = false;
+    }
+    else if
+        (!regname.test(mname.value)) {
+        setError(3, "This is not a Valid Name")
+        st = false;
+    }
+
+    if
+        (regname.test(mname.value)) {
+        solveError(3, "This is a Valid Name")
+    }
+
+    if (dob.value == "") {
+        setError(4, "Select your DOB")
+        st = false;
+    }
+
+    if (category.value == "") {
+        setError(5, "Select your Category")
+        st = false;
+    }
+    if (gender.value == "") {
+        setError(6, "Select your Gender")
+        st = false;
+    }
+
+
+    if
+        (!addressverify.test(address.value)) {
+        setError(7, "This is not a Valid Address")
+        st = false;
+    }
+    if
+    (addressverify.test(address.value)) {
+    solveError(7, "This is a Valid Address")
+  }
+
+  if
+  (!cityverify.test(city.value)) {
+  setError(8, "This is not a Valid City")
+  st = false;
+}
+if
+(cityverify.test(city.value)) {
+solveError(8, "This is a Valid city")
+}
+   
+
+if (state.value == "") {
+    setError(9, "Select your State")
+    st = false;
+}
+
+if
+(!zipverify.test(zip.value)) {
+setError(10, "This is not a Valid zip")
+st = false;
+}
+if
+(zipverify.test(zip.value)) {
+solveError(10, "This is a Valid zip")
+}
+
+if (qu.value == "") {
+setError(11, "Select your Qualification")
+st = false;
+}
+
+if (uni.value == "") {
+    setError(12, "Select your University")
+    st = false;
+}
+
+
+if
+(!perverify.test(per.value)) {
+setError(13, "This is not a Valid ")
+st = false;
+}
+if
+(perverify.test(per.value)) {
+solveError(13, "This is a Valid")
+}
+
+if
+(!yearverify.test(year.value)) {
+setError(14, "This is not a Valid Year ")
+st = false;
+}
+if
+(yearverify.test(year.value)) {
+solveError(14, "This is a Valid")
+}
+
+if (identity.value == "") {
+    setError(15, "Select your Identity Type")
+    st = false;
+}
+
+if (idno.value.length < 8 || idno.value == "") {
+    setError(16, "ID too Short")
+    st = false;
+}
+
+else if (idno.value.length > 20) {
+    setError(16, "ID too Long")
+    st = false;
+}
+else if
+    (!idverify.test(idno.value)) {
+    setError(16, "This is not a Valid ID")
+    st = false;
+}
+
+if
+    (idverify.test(idno.value)) {
+    solveError(16, "This is a Valid ID")
+}    if
+(!phoneverify.test(phone.value)) {
+setError(19, "This is not a Valid ")
+st = false;
+}
+if
+(phoneverify.test(phone.value)) {
+  phone.disabled=true;
+solveError(19, "This is a Valid")
+}
+
+if
+(!emailverify.test(email.value)) {
+setError(20, "This is not a Valid Email")
+st = false;
+}
+if
+(emailverify.test(email.value)) {
+solveError(20, "This is a Valid Email")
+}
+
+if (password.value == "") {
+    setError(21, "Please Input Password")
+    st = false;
+    }
+    else if(!passwordverify.test(password.value)) {
+        setError(21, "Please Enter Valid Password")
+        alert("Your password must be atleast of 8 Character containing atleast 1 special characters 1 Upper Case Alphabet 1 number and Lower case letter");
+        st = false;
+        }
+        else if(passwordverify.test(password.value)) {
+            solveError(21, "This is a Valid Password")
+            }
+
+
+
+    if (cpass.value == "") {
+    setError(22, "Enter Password Again")
+    st = false;
+    } 
+   
+    
+    if(!(password.value)==(cpass.value)) {
+    setError(22, "Password does not Match")
+    st = false;
+    }
+     if((password.value)==(cpass.value)) {
+      cpass.disabled=true;
+    solveError(22, "Password Match")
+    }
+   if (termagree.value == "") {
+    setError(23, "Accept Terms and Conditions")
+    st = false;
+}
+
+
+
+    return st;
+
+}
+
+
+
+
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
